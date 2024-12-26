@@ -38,45 +38,40 @@ Hardware – PCs, Cyclone II , USB flasher
 
 **Program:**
 
-Program to implement the given logic function and to verify its operations in quartus using Verilog programming. 
-
+/* Program to implement the given logic function and to verify its operations in quartus using Verilog programming. 
+Developed by:CHINTALA AMAN MONTY
+RegisterNumber:24004776*/
 ```
-module Boolean_min(A,B,C,D,W,X,Y,Z,F1,F2);
-input A,B,C,D,W,X,Y,Z;
-wire x1,x2,x3,x4,x5,x6,x7,x8,x9,x10;
-output F1,F2;
-assign x1=(~A)&(~B)&(~C)&(~D);
-assign x2=(A)&(~C)&(~D);
-assign x3=(~B)&(C)&(~D);
-assign x4=(~A)&(B)&(C)&(D);
-assign x5=(B)&(~C)&(D);
-assign x6=(X)&(~Y)&(Z);
-assign x7=(~X)&(~Y)&(Z);
-assign x8=(~W)&(X)&(Y);
-assign x9=(W)&(~X)&(Y);
-assign x10=(W)&(X)&(Y);
-assign F1=x1|x2|x3|x4|x5;
-assign F2=x6|x7|x8|x9|x10;
-endmodule
-
-```
-## Logic symbol & Truthtable:
-![image](https://github.com/23004205/BOOLEAN_FUNCTION_MINIMIZATION/assets/138971114/a9ccb75e-db7b-490e-8b69-10f820e6bff4)
-
-![image](https://github.com/23004205/BOOLEAN_FUNCTION_MINIMIZATION/assets/138971114/6835b6c0-9fe5-4f55-8288-53b7d0c42104)
-
-
+    module combinationalcircuit(A,B,C,D,F1);
+    input A,B,C,D;
+    output F1;
+    wire x1,x2,x3,x4,x5;
+    assign x1=(~A)&(~B)&(~C)&(~D);
+    assign x2=(A)&(~C)&(~D);
+    assign x3=(~B)&(C)&(~D);
+    assign x4=(~A)&(B)&(C)&(D);
+    assign x5=(B)&(~C)&(D);
+    assign F1=x1|x2|x3|x4|x5;
+    endmodule
 
 
 **RTL realization**
 
-![image](https://github.com/23004205/BOOLEAN_FUNCTION_MINIMIZATION/assets/138971114/5ffd7097-c99c-4ef3-a82d-0108e72a8b9e)
-
+![image](https://github.com/Rajaraman77/BOOLEAN_FUNCTION_MINIMIZATION/assets/150319383/0a08f4f8-bfd5-4884-b9a4-8e675ab92d1b)
 
 **Output:**
-![image](https://github.com/23004205/BOOLEAN_FUNCTION_MINIMIZATION/assets/138971114/3294f442-723b-4550-ab9c-49ed60325deb)
+**Timing Diagram**
+
+![image](https://github.com/Rajaraman77/BOOLEAN_FUNCTION_MINIMIZATION/assets/150319383/0e00894c-ff17-415f-9905-d385cf43a7ff)
+
+**Truth table**
+
+![image](https://github.com/Rajaraman77/BOOLEAN_FUNCTION_MINIMIZATION/assets/150319383/4b23474f-00b9-4516-8c9d-3f1caed43aa5)
+
+
+
+
 
 **Result:**
 
 Thus the given logic functions are implemented using and their operations are verified using Verilog programming.
-
